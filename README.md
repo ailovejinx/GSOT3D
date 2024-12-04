@@ -1,14 +1,14 @@
-# <p align="center">GSOT3D: Towards Generic 3D Single Object Tracking in the Wild</p>
+# <p align="center"><small>GSOT3D: Towards Generic 3D Single Object Tracking in the Wild</small></p>
 
 [**GSOT3D: Towards Generic 3D Single Object Tracking in the Wild**](https://arxiv.org/abs/2412.02129)<br>
 Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</sup>, Libo Zhang<sup>$\dagger$</sup> <br> ($\dagger$: Equal advising and co-last authors)<br>
 
-[![arXiv](https://img.shields.io/badge/arXiv-2412.02129-b31b1b.svg)](https://arxiv.org/abs/2412.02129)  [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-yellow)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![arXiv](https://img.shields.io/badge/arXiv-2412.02129-b31b1b.svg)](https://arxiv.org/abs/2412.02129)  [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-yellow)](https://creativecommons.org/licenses/by-sa/4.0/)  [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Failovejinx%2FGSOT3D&count_bg=%23B23DC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 <!-- [![Static Badge](https://img.shields.io/badge/Project_page-visit-green)](https://arxiv.org/abs/2412.02129) -->
 
 ## :dolphin: GSOT3D Benchmark
 <p align="center">
-<img src="./assets/example.png" width="90%">
+<img src="./assets/example.png" width="100%">
 </p>
 
 **Figure:** We present a novel benchmark, [**GSOT3D**](https://arxiv.org/abs/2403.03493), that aims at facilitating development of generic 3D single object tracking (SOT) in the wild. Specifically, GSOT3D offers **620** sequences with **123K** frames, and covers a wide selection of **54** object categories. Each sequence is offered with **multiple modalities**, including **the point cloud (PC)**, **RGB image**, and **depth**. This allows GSOT3D to support various 3D tracking tasks, such as single-modal 3D SOT on PC and multi-modal 3D SOT on RGB-PC or RGB-D, and thus greatly broadens research directions for 3D object tracking. 
@@ -37,7 +37,7 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 **Figure:** Illustration of category organization in GSOT3D and its distribution of sequence number in each classes.
 
 <p align="center">
-<img src="./assets/sequence_and_point_distribute.png" width="90%">
+<img src="./assets/sequence_and_point_distribute.png" width="100%">
 </p>
 
 **Figure:** Statistics on GSOT3D. (a): Distribution of sequence length. (b): Average number of points in each object category
@@ -53,28 +53,28 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 ### :yellow_heart: Overall Performance of Eight SOTA Trackers
 
 <p align="center">
-<img src="./assets/tab_all_performance.png" width="80%">
+<img src="./assets/tab_all_performance.png" width="100%">
 </p>
 
 **Table:** Overall performance of eight state-of-the-art trackers and our **PROT3D** using mAO, mSR<sub>50</sub> and mSR<sub>75</sub>. The best three results are highlighted in <span style="color: red;">red</span>, <span style="color: blue;">blue</span>, and <span style="color: green;">green</span> fonts, respectively.
 
 ### :yellow_heart: Attribute-based Evaluation
 <p align="center">
-<img src="./assets/att_fig.png" width="90%">
+<img src="./assets/att_fig.png" width="100%">
 </p>
 
 **Figure:** Attribute-based performance and comparison using mAO, mSR<sub>50</sub> and mSR<sub>75</sub>.
 
 ### :yellow_heart: Attribute-based Evaluation
 <p align="center">
-<img src="./assets/compare_to_kitti.png" width="50%">
+<img src="./assets/compare_to_kitti.png" width="55%">
 </p>
 
 **Table:** Comparison of GSOT3D with KITTI.
 
 ### :yellow_heart: Examples of GSOT3D
 <p align="center">
-<img src="./assets/pred_vis.png" width="90%">
+<img src="./assets/pred_vis.png" width="100%">
 </p>
 
 **Figure:** Visualization of ground truth and several tracking results on GSOT3D.
@@ -85,13 +85,13 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 ## :robot: Data Acquisition Platform
 
 <p align="center">
-<img src="./assets/platform.png" width="30%">
+<img src="./assets/platform.png" width="40%">
 </p>
 
 **Figure:** To collect multimodal data for GSOT3D, we build **a mobile robotic platform** based on Clearpath Husky A200. Multiple sensors, including a 64-beam LiDAR, an RGB camera and a depth camera, are deployed on the platform with careful calibration.
 
 <p align="center">
-<img src="./assets/sensor_config.png" width="35%">
+<img src="./assets/sensor_config.png" width="45%">
 </p>
 
 **Table:** Specific configuration of sensors and robot chassis of the mobile robotic platform.
