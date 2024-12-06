@@ -3,7 +3,7 @@
 [**GSOT3D: Towards Generic 3D Single Object Tracking in the Wild**](https://arxiv.org/abs/2412.02129)<br>
 Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</sup>, Libo Zhang<sup>$\dagger$</sup> <br> ($\dagger$: Equal advising and co-last authors)<br>
 
-[![arXiv](https://img.shields.io/badge/arXiv-2412.02129-b31b1b.svg)](https://arxiv.org/abs/2412.02129)  [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-yellow)](https://creativecommons.org/licenses/by-sa/4.0/)  [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Failovejinx%2FGSOT3D&count_bg=%23B23DC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![arXiv](https://img.shields.io/badge/arXiv-2412.02129-b31b1b.svg)](https://arxiv.org/abs/2412.02129)  [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-yellow)](https://creativecommons.org/licenses/by-sa/4.0/)  [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Failovejinx%2FGSOT3D&count_bg=%23B23DC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false)](https://hits.seeyoufarm.com)
 <!-- [![Static Badge](https://img.shields.io/badge/Project_page-visit-green)](https://arxiv.org/abs/2412.02129) -->
 
 ## :dolphin: GSOT3D Benchmark
@@ -65,7 +65,7 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 
 **Figure:** Attribute-based performance and comparison using mAO, mSR<sub>50</sub> and mSR<sub>75</sub>.
 
-### :yellow_heart: Attribute-based Evaluation
+### :yellow_heart: Comparison with Other Benchmark
 <p align="center">
 <img src="./assets/compare_to_kitti.png" width="55%">
 </p>
