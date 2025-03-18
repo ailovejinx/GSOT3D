@@ -11,7 +11,7 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 <img src="./assets/example.png" width="100%">
 </p>
 
-**Figure:** We present a novel benchmark, [**GSOT3D**](https://arxiv.org/abs/2403.03493), that aims at facilitating development of generic 3D single object tracking (SOT) in the wild. Specifically, GSOT3D offers **620** sequences with **123K** frames, and covers a wide selection of **54** object categories. Each sequence is offered with **multiple modalities**, including **the point cloud (PC)**, **RGB image**, and **depth**. This allows GSOT3D to support various 3D tracking tasks, such as single-modal 3D SOT on PC and multi-modal 3D SOT on RGB-PC or RGB-D, and thus greatly broadens research directions for 3D object tracking. 
+**Figure:** We present a novel benchmark, [**GSOT3D**](https://arxiv.org/abs/2412.02129), that aims at facilitating development of generic 3D single object tracking (SOT) in the wild. Specifically, GSOT3D offers **620** sequences with **123K** frames, and covers a wide selection of **54** object categories. Each sequence is offered with **multiple modalities**, including **the point cloud (PC)**, **RGB image**, and **depth**. This allows GSOT3D to support various 3D tracking tasks, such as single-modal 3D SOT on PC and multi-modal 3D SOT on RGB-PC or RGB-D, and thus greatly broadens research directions for 3D object tracking. 
 
 ### :sparkles: Highlights
 
