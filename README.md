@@ -8,9 +8,8 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 <!-- [![Static Badge](https://img.shields.io/badge/Project_page-visit-green)](https://arxiv.org/abs/2412.02129) -->
 
 ## News
-
+- **[2025/06/30]** Our GSOT3D is now accessible at 🤗[HuggingFace](https://huggingface.co/datasets/Ailovejinx/GSOT3D).
 - **[2025/06/26]** GSOT3D is accepted by ICCV 2025! The final rating is 5/6/3.
-- **[2025/02/26]** GSOT3D is desk-rejected by PC of CVPR 2025 due to the highly irresponsible reviewers. The final rating is 4/4/2. We are very sorry and regretful.
 
 ## :dolphin: GSOT3D Benchmark
 <p align="center">
@@ -104,7 +103,47 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 
 ## :rocket: Download GSOT3D
 
-We will release all download links and models soon. Stay tuned!
+Our GSOT3D is now accessible at 🤗[HuggingFace](https://huggingface.co/datasets/Ailovejinx/GSOT3D).
+
+For BaiduNetDisk, please stay tuned
+
+## Usage of GSOT3D
+
+1. Download the GSOT3D from HuggingFace or BaiduNetDisk using the above link.
+2. Unzip the `*.tar.gz` files in `./sequences` to folder `./data`.
+3. Organize the data set according to the following structure
+```
+gsot3d
+├── data
+|   ├── Seq_00001
+│       ├── calib.json
+│       ├── camera_image_0
+│           ├── 00001.jpg
+|           ···
+│       ├── camera_image_1
+│           ├── 00001.jpg
+|           ···
+│       ├── camera_image_2
+│           ├── 00001.jpg
+|           ···
+│       ├── camera_image_3
+│           ├── 00001.jpg
+|           ···
+│       ├── gt.txt
+│       ├── lidar_point_cloud_0
+│           ├── 00001.pcd
+|           ···
+│       └── point_cloud_bin
+│           ├── 00001.bin
+|           ···
+|   ├── Seq_00002
+|       ···
+|   ···
+│   └── Seq_00650
+├── symmetric.txt
+├── test_set.txt
+└── train_set.txt
+```
 
 ## :memo: Responsible Usage of GSOT3D
 GSOT3D aims to facilitate research and applications of 3D single object tracking. It is developed and used for **research purpose only**.
