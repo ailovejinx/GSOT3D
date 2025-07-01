@@ -7,6 +7,10 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 <!-- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Failovejinx%2FGSOT3D&count_bg=%23B23DC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false)](https://hits.seeyoufarm.com) -->
 <!-- [![Static Badge](https://img.shields.io/badge/Project_page-visit-green)](https://arxiv.org/abs/2412.02129) -->
 
+## News
+- **[2025/06/30]** Our GSOT3D is now accessible at 🤗[HuggingFace](https://huggingface.co/datasets/Ailovejinx/GSOT3D).
+- **[2025/06/26]** GSOT3D is accepted by ICCV 2025!
+
 ## :dolphin: GSOT3D Benchmark
 <p align="center">
 <img src="./assets/example.png" width="100%">
@@ -99,7 +103,47 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 
 ## :rocket: Download GSOT3D
 
-We will release all download links and models soon. Stay tuned!
+Our GSOT3D is now accessible at 🤗[HuggingFace](https://huggingface.co/datasets/Ailovejinx/GSOT3D).
+
+For BaiduNetDisk, please stay tuned
+
+## Usage of GSOT3D
+
+1. Download the GSOT3D from HuggingFace or BaiduNetDisk using the above link.
+2. Unzip the `*.tar.gz` files in `./sequences` to folder `./data`.
+3. Organize the data set according to the following structure
+```
+gsot3d
+├── data
+|   ├── Seq_00001
+│       ├── calib.json
+│       ├── camera_image_0
+│           ├── 00001.jpg
+|           ···
+│       ├── camera_image_1
+│           ├── 00001.jpg
+|           ···
+│       ├── camera_image_2
+│           ├── 00001.jpg
+|           ···
+│       ├── camera_image_3
+│           ├── 00001.jpg
+|           ···
+│       ├── gt.txt
+│       ├── lidar_point_cloud_0
+│           ├── 00001.pcd
+|           ···
+│       └── point_cloud_bin
+│           ├── 00001.bin
+|           ···
+|   ├── Seq_00002
+|       ···
+|   ···
+│   └── Seq_00650
+├── symmetric.txt
+├── test_set.txt
+└── train_set.txt
+```
 
 ## :memo: Responsible Usage of GSOT3D
 GSOT3D aims to facilitate research and applications of 3D single object tracking. It is developed and used for **research purpose only**.
