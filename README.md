@@ -8,7 +8,8 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 <!-- [![Static Badge](https://img.shields.io/badge/Project_page-visit-green)](https://arxiv.org/abs/2412.02129) -->
 
 ## News
-- **[2025/06/30]** Our GSOT3D is now accessible at 🤗[HuggingFace](https://huggingface.co/datasets/Ailovejinx/GSOT3D).
+- **[2025/07/xx]** TODO: Release the code of PROT3D.
+- **[2025/06/30]** Our GSOT3D is now accessible at 🤗[HuggingFace](https://huggingface.co/datasets/Ailovejinx/GSOT3D) and [BaiduNetDisk (Fetch Code: gsot)](https://pan.baidu.com/s/1sWttodkYyhL_pxZ53d-QVQ).
 - **[2025/06/26]** GSOT3D is accepted by ICCV 2025!
 
 ## :dolphin: GSOT3D Benchmark
@@ -103,9 +104,9 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 
 ## :rocket: Download GSOT3D
 
-Our GSOT3D is now accessible at 🤗[HuggingFace](https://huggingface.co/datasets/Ailovejinx/GSOT3D).
+Our GSOT3D is now accessible at 🤗[HuggingFace](https://huggingface.co/datasets/Ailovejinx/GSOT3D) and [BaiduNetDisk (Fetch Code: gsot)](https://pan.baidu.com/s/1sWttodkYyhL_pxZ53d-QVQ).
 
-For BaiduNetDisk, please stay tuned
+If you find any issues with the download link, please feel free to open an issue or contact us via `jiaoyifan23@mails.ucas.ac.cn`.
 
 ## Usage of GSOT3D
 
