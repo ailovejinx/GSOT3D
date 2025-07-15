@@ -1,0 +1,216 @@
+# dataset configs
+
+dataset_cfg:
+  dataset_type: KITTIMem9DoF
+  scale: FULL
+  data_root_dir: /data/dataset/kitti/tracking/training
+  category_name: All
+  coordinate_mode: camera
+  num_smp_frames_per_tracklet: 8
+  max_frame_dis: 1
+  use_seq_aug: False
+  use_smp_aug: True
+  # crop local area for tracking
+  frame_npts: 1024
+  frame_offset: 2.0
+  frame_offset2: 0.0
+  frame_scale: 1.0
+  # crop the tracked target across frames to generate completion gt
+  target_scale: 1.25
+  target_offset: 0.0
+  # params to simulate motion
+  offset_max: [3., 10., 10.]
+  up_axis: [0,-1,0]
+  degree: True
+  train_cfg:
+    cache: True
+    preload_offset: 10
+    use_z: True
+  eval_cfg:
+    cache: True
+    use_z: True
+    preload_offset: -1
+  dynamic_threshold: 0.15
+
+
+
+# model configs
+
+model_cfg:
+  model_type: PROT3D
+  train_memory_size: 2
+  # ref_memory_size: 2
+  eval_memory_size: 3
+  backbone_cfg:
+    type: DGCNN
+    layers_cfg:
+      - {
+        mlps: [0, 64, 64, 128],
+        use_xyz: True,
+        sample_method: Range,
+        nsample: 32,
+      }
+      - {
+        mlps: [128, 128, 128, 128],
+        use_xyz: True,
+        sample_method: Range,
+        nsample: 32,
+      }
+      - {
+        mlps: [128, 256, 256, 256],
+        use_xyz: True,
+        sample_method: Range,
+        nsample: 32,
+      }
+    out_channels: 128
+    downsample_ratios: [2,4,8]
+
+  transformer_cfg:
+    feat_dim: 128
+    layers_cfg:
+      - {
+        type: attn,
+        feat_dim: 128,
+        num_heads: 1,
+        attn_dropout: 0.1,
+        dropout: 0.1,
+        norm: 'layer_norm',
+        ffn_cfg: {
+          hidden_dim: 128,
+          activation: 'relu',
+          dropout: 0.1,
+          use_bias: True,
+          norm: 'layer_norm'
+        },
+        pos_emb_cfg: {
+          type: mlp
+        },
+      }
+      - {
+        type: attn,
+        feat_dim: 128,
+        num_heads: 1,
+        attn_dropout: 0.1,
+        dropout: 0.1,
+        norm: 'layer_norm',
+        ffn_cfg: {
+          hidden_dim: 128,
+          activation: 'relu',
+          dropout: 0.1,
+          use_bias: True,
+          norm: 'layer_norm'
+        },
+        pos_emb_cfg: {
+          type: mlp
+        },
+      }
+
+  rpn_cfg:
+    feat_dim: 128
+    n_smp_x: 3
+    n_smp_y: 3
+    n_smp_z: 5
+    n_proposals: 128
+    n_proposals_train: 128
+    sample_method: shrink
+    edge_aggr:
+      pre_mlps: [129, 128, 128]
+      mlps: [128, 128, 128]
+      use_xyz: True
+      nsample: 8
+    # sigma_n2: 0.15
+    # fixed_sigma_n2: True
+  fusion_head_cfg:
+    feat_dim: 128
+    n_smp_x: 3
+    n_smp_y: 3
+    n_smp_z: 5
+    n_proposals: 64
+    n_proposals_train: 64
+    sample_method: shrink
+    edge_aggr:
+      pre_mlps: [ 129, 128, 128 ]
+      mlps: [ 128, 128, 128 ]
+      use_xyz: True
+      nsample: 8
+
+  fusion_transformer_cfg:
+    feat_dim: 128
+    layers_cfg:
+      - {
+        type: attn,
+        feat_dim: 128,
+        num_heads: 1,
+        attn_dropout: 0.1,
+        dropout: 0.1,
+        norm: 'layer_norm',
+        ffn_cfg: {
+            hidden_dim: 128,
+            activation: 'relu',
+            dropout: 0.1,
+            use_bias: True,
+            norm: 'layer_norm'
+        },
+        pos_emb_cfg: {
+            type: mlp
+        },
+      }
+      - {
+        type: attn,
+        feat_dim: 128,
+        num_heads: 1,
+        attn_dropout: 0.1,
+        dropout: 0.1,
+        norm: 'layer_norm',
+        ffn_cfg: {
+          hidden_dim: 128,
+          activation: 'relu',
+          dropout: 0.1,
+          use_bias: True,
+          norm: 'layer_norm'
+        },
+        pos_emb_cfg: {
+          type: mlp
+        },
+      }
+
+
+# task configs
+task_type: PROT3D
+missing_threshold: 0.2
+
+# optimizer & scheduler configs
+optimizer_cfg:
+  optimizer_type: Adam
+  lr: 0.001
+  weight_decay: 0
+  betas: [0.5, 0.999]
+  eps: 1.0e-6
+
+scheduler_cfg:
+  scheduler_type: StepLR
+  step_size: 40
+  gamma: 0.2
+
+# loss configs
+loss_cfg:
+  mask_weight: 0.2
+  rfn_obj_weight: 1.0
+  crs_obj_weight: 1.0
+  bbox_weight: 1.0
+  center_weight: 10.0
+
+# train & eval configs
+train_cfg:
+  max_epochs: 80
+  batch_size: 9
+  num_workers: 16
+  save_per_epoch: 20
+  save_top_k: 10
+  val_per_epoch: 5
+
+eval_cfg:
+  batch_size: 1
+  num_workers: 16
+  iou_space: 3
+  iou_mode: 9-DoF

@@ -8,7 +8,8 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 <!-- [![Static Badge](https://img.shields.io/badge/Project_page-visit-green)](https://arxiv.org/abs/2412.02129) -->
 
 ## :boom: News
-- **[2025/07/xx]** TODO: Release the code of PROT3D.
+- **[2025/08/xx]** TODO: Evaluation part and Metrics.
+- **[2025/07/15]** :blush: Code of PROT3D is now released.
 - **[2025/06/30]** :bar_chart: Our GSOT3D is now accessible at 🤗[HuggingFace](https://huggingface.co/datasets/Ailovejinx/GSOT3D) and [BaiduNetDisk (Fetch Code: gsot)](https://pan.baidu.com/s/1sWttodkYyhL_pxZ53d-QVQ).
 - **[2025/06/26]** :tada: GSOT3D is accepted by **ICCV 2025**!
 
@@ -110,7 +111,72 @@ Total Size of GSOT3D: **~315GB**
 
 If you find any issues with the download link, please feel free to open an issue or contact us via `jiaoyifan23@mails.ucas.ac.cn`.
 
-## Usage of GSOT3D
+## :memo: Responsible Usage of GSOT3D
+GSOT3D aims to facilitate research and applications of 3D single object tracking. It is developed and used for **research purpose only**.
+
+## :gun: PROT3D Baseline
+
+### Preparation
+
+Here we list the most important part of our dependencies
+
+```
+The following dependencies are tested on: 
+  OS: Ubuntu 20.04.2 LTS x86_64
+  CUDA: 11.1
+  Python: 3.8.10
+  Pytorch: 1.8.1+cu111
+  
+  GPU: NVIDIA GeForce RTX 3090
+  CPU: Intel Xeon Platinum 8153 (64) @ 2.800GHz
+```
+
+| Dependency        | Version     |
+|-------------------|-------------|
+| open3d            | 0.18.0      |
+| pointnet2-ops     | 3.0.0       |
+| pytorch           | 1.8.1+cu111 |
+| pytorch-lightning | 1.6.0       |
+| pytorch3d         | 0.6.0       |
+| shapely           | 1.7.1       |
+| torchvision       | 0.9.1+cu111 |
+
+
+#### Install conda package.
+```shell
+cd ${path/to/GSOT3D}$
+conda env create -f freeze.yml && conda activate prot3d
+
+#make sure your torch version is gpu version and matches your cuda version
+# for example, if your cuda version is 11.1, you can install torch 1.8.1 as follows
+pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
+
+# install pointnet2_ops and pytorch3d
+cd ./dep_libs/pointnet2_ops_lib && pip install -e .
+cd ../pytorch3d-0.6.0 && pip install -e .
+
+```
+
+#### Prepare Datasets
+##### KITTI
+
+- Download the data for [velodyne](http://www.cvlibs.net/download.php?file=data_tracking_velodyne.zip), [calib](http://www.cvlibs.net/download.php?file=data_tracking_calib.zip) and [label_02](http://www.cvlibs.net/download.php?file=data_tracking_label_2.zip) from [KITTI Tracking](http://www.cvlibs.net/datasets/kitti/eval_tracking.php).
+
+- Unzip the downloaded files.
+
+- Put the unzipped files under the same folder as following.
+
+  ```
+  [Parent Folder]
+  --> [calib]
+      --> {0000-0020}.txt
+  --> [label_02]
+      --> {0000-0020}.txt
+  --> [velodyne]
+      --> [0000-0020] folders with velodynes .bin files
+  ```
+
+##### GSOT3D
 
 1. Download the GSOT3D from HuggingFace or BaiduNetDisk using the above link.
 2. Unzip the `*.tar.gz` files in `./sequences` to folder `./data`.
@@ -148,8 +214,29 @@ gsot3d
 └── train_set.txt
 ```
 
-## :memo: Responsible Usage of GSOT3D
-GSOT3D aims to facilitate research and applications of 3D single object tracking. It is developed and used for **research purpose only**.
+### Training
+
+To train PROT3D on GSOT3D, you can run the following command:
+
+```bash
+# support DDP, use 8 gpus
+python main.py configs/prot_gsot3d_all_cfg.yaml --run_name prot3d_gsot3d --gpus 0 1 2 3 4 5 6 7
+```
+
+### Testing
+```bash
+# load checkpoint and test
+python main.py configs/prot_gsot3d_all_cfg.yaml --gpus 4 --phase test --resume_from ${path/to/checkpoint}
+```
+
+### Evaluation
+TODO
+
+### Acknowledgement
+
+Our PROT3D is heavily built upon [Open3DSOT](https://github.com/Ghostish/Open3DSOT) and [MBPTrack](https://github.com/slothfulxtx/MBPTrack3D). We thank the authors for their great work and open-sourcing their code.
+
+For more details, you can refer to Open3DSOT and MBPTrack.
 
 ## :balloon: Citation
 If you find our GSOT3D useful, please consider giving it a star and citing it. Thanks!
