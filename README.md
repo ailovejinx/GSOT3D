@@ -8,7 +8,7 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 <!-- [![Static Badge](https://img.shields.io/badge/Project_page-visit-green)](https://arxiv.org/abs/2412.02129) -->
 
 ## :boom: News
-- **[2025/08/xx]** TODO: Evaluation part and Metrics.
+- **[2025/10/28]** :speech_balloon: Evaluation toolkit is now released at [GSOT3D-Eval-Metrics](https://github.com/ailovejinx/GSOT3D-Eval-Metrics)
 - **[2025/07/15]** :blush: Code of PROT3D is now released.
 - **[2025/06/30]** :bar_chart: Our GSOT3D is now accessible at 🤗[HuggingFace](https://huggingface.co/datasets/Ailovejinx/GSOT3D) and [BaiduNetDisk (Fetch Code: gsot)](https://pan.baidu.com/s/1sWttodkYyhL_pxZ53d-QVQ).
 - **[2025/06/26]** :tada: GSOT3D is accepted by **ICCV 2025**!
@@ -127,7 +127,7 @@ The following dependencies are tested on:
   Python: 3.8.10
   Pytorch: 1.8.1+cu111
   
-  GPU: NVIDIA GeForce RTX 3090
+  GPU: NVIDIA GeForce RTX 3090 x8
   CPU: Intel Xeon Platinum 8153 (64) @ 2.800GHz
 ```
 
