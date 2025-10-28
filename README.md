@@ -8,7 +8,7 @@ Yifan Jiao, Yunhao Li, Junhua Ding, Qing Yang, Song Fu, Heng Fan<sup>$\dagger$</
 <!-- [![Static Badge](https://img.shields.io/badge/Project_page-visit-green)](https://arxiv.org/abs/2412.02129) -->
 
 ## :boom: News
-- **[2025/10/28]** :speech_balloon: Evaluation toolkit is now released at [GSOT3D-Eval-Metrics](https://github.com/ailovejinx/GSOT3D-Eval-Metrics)
+- **[2025/10/28]** :speech_balloon: Evaluation toolkit is now released at [GSOT3D-Eval-Metrics](https://github.com/ailovejinx/GSOT3D-Eval-Metrics).
 - **[2025/07/15]** :blush: Code of PROT3D is now released.
 - **[2025/06/30]** :bar_chart: Our GSOT3D is now accessible at 🤗[HuggingFace](https://huggingface.co/datasets/Ailovejinx/GSOT3D) and [BaiduNetDisk (Fetch Code: gsot)](https://pan.baidu.com/s/1sWttodkYyhL_pxZ53d-QVQ).
 - **[2025/06/26]** :tada: GSOT3D is accepted by **ICCV 2025**!
