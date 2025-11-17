@@ -1,0 +1,31 @@
+# <type>(<scope>): <subject>
+# |<----  Using a Maximum Of 50 Characters  ---->|
+
+# Explain why this change is being made
+# |<----   Try To Limit Each Line to a Maximum Of 72 Characters   ---->|
+
+# Provide links or keys to any relevant tickets, articles or other resources
+# Example: Closes #23
+
+# --- COMMIT END ---
+# Type can be 
+#    feat     (new feature)
+#    fix      (bug fix)
+#    docs     (changes to documentation)
+#    style    (formatting, missing semi colons, etc; no code change)
+#    refactor (refactoring production code)
+#    test     (adding missing tests, refactoring tests; no production code change)
+#    chore    (updating build tasks, package manager configs, etc; no production code change)
+#    perf     (performance improvements)
+#    ci       (changes to CI configuration)
+#    build    (changes to build system or dependencies)
+#    revert   (reverts a previous commit)
+# --------------------
+# Scope is optional and can be:
+#    models, datasets, configs, evaluation, training, utils, deps
+# --------------------
+# Remember to:
+#    - Use the imperative, present tense: "change" not "changed" nor "changes"
+#    - Don't capitalize the first letter
+#    - No dot (.) at the end
+# --------------------

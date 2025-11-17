@@ -238,6 +238,18 @@ Our PROT3D is heavily built upon [Open3DSOT](https://github.com/Ghostish/Open3DS
 
 For more details, you can refer to Open3DSOT and MBPTrack.
 
+## :handshake: Contributing
+
+We welcome contributions to GSOT3D! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+- Git commit message conventions
+- Code style guidelines
+- Pull request process
+
+To set up the git commit message template:
+```bash
+git config commit.template .gitmessage
+```
+
 ## :balloon: Citation
 If you find our GSOT3D useful, please consider giving it a star and citing it. Thanks!
 ```
